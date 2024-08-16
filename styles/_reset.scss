@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: auto;
+}
+
+body,
+html {
+    border: 0;
+    height: 100%;
+}
+
+body {
+    height: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+}
+
+button {
+    display: inline-block;
+    background: none;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    text-align: left;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover {
+    -webkit-transition: color 5000s ease-in-out 0s, background-color 5000s ease-in-out 0s;
+    transition: color 5000s ease-in-out 0s, background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: var(--color-white) !important;
+}
+
+input:required {
+    box-shadow: none;
+}
+
+input:invalid {
+    box-shadow: 0 0 0 transparent;
+}
+
+textarea {
+    overflow: auto;
+}
+
+li {
+    list-style: none outside none;
+}
+
+main {
+    opacity: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.js-focus-visible :focus:not(.focus-visible),
+[data-js-focus-visible] :focus:not([data-focus-visible-added]) {
+    outline: none;
+}
+
+address {
+    font-style: normal;
+}
+
+#dat-gui {
+    z-index: 100 !important;
+}
+
+.dg .color,
+.dg.ac {
+    z-index: 1000 !important;
+}

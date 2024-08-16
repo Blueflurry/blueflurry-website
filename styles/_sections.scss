@@ -1,0 +1,41 @@
+.section {
+    width: 100%;
+
+    &-overflown {
+        overflow: hidden;
+    }
+
+    &-indent {
+        padding-top: 64px;
+        padding-bottom: 64px;
+
+        @include for-laptop {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        &--small {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+    }
+
+    &-black {
+        background-color: $color-darkMidnight;
+        color: $color-white;
+    }
+
+    &-white {
+        background-color: $color-white;
+        color: $color-black;
+    }
+
+    &-smoke {
+        background-color: $color-smoke;
+        color: $color-black;
+    }
+
+    &-transparent {
+        color: $color-black;
+    }
+}

@@ -1,0 +1,424 @@
+@font-face {
+    font-family: UniversalSans-500;
+    src: url(/assets/fonts/UniversalSans-500.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: UniversalSans-500-Headlines;
+    src: url(/assets/fonts/UniversalSans-500-Headlines.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: UniversalSans-740;
+    src: url(/assets/fonts/UniversalSans-740.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: UniversalSans-740-Headlines;
+    src: url(/assets/fonts/UniversalSans-740-Headlines.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: UniversalSans-500, Arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    color: $color-black;
+    min-height: 100vh;
+    min-width: 320px;
+}
+
+.text-xl {
+    font-family: UniversalSans-500-Headlines, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 135%;
+    letter-spacing: -0.02em;
+
+    @include for-tablet {
+        font-size: 32px;
+    }
+
+    @include for-laptop {
+        font-size: 48px;
+        line-height: 125%;
+    }
+
+    @include for-desktop-lg {
+        font-size: 52px;
+        line-height: 130%;
+    }
+}
+
+.text-lg,
+p {
+    font-family: UniversalSans-500, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+
+    @include for-tablet {
+        font-size: 20px;
+        letter-spacing: -0.01em;
+    }
+
+    @include for-laptop {
+        font-size: 28px;
+    }
+
+    @include for-desktop-lg {
+        font-size: 32px;
+    }
+
+    @include for-desktop-xl {
+        font-size: 40px;
+    }
+
+    &.text-bold {
+        font-family: UniversalSans-740, Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 740;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+
+        @include for-tablet {
+            font-size: 20px;
+        }
+
+        @include for-laptop {
+            font-size: 28px;
+            line-height: 120%;
+        }
+
+        @include for-desktop-lg {
+            font-size: 32px;
+        }
+
+        @include for-desktop-xl {
+            font-size: 36px;
+        }
+    }
+}
+
+.text-md {
+    font-family: UniversalSans-500, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 135%;
+    letter-spacing: -0.01em;
+
+    @include for-tablet {
+        line-height: 145%;
+    }
+
+    @include for-laptop {
+        font-size: 22px;
+        line-height: 135%;
+        letter-spacing: -0.02em;
+    }
+
+    @include for-desktop-lg {
+        font-size: 26px;
+        line-height: 145%;
+    }
+
+    @include for-desktop-xl {
+        font-size: 36px;
+    }
+
+    &.text-bold {
+        font-family: UniversalSans-740, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 740;
+        line-height: 135%;
+        letter-spacing: -0.01em;
+
+        @include for-tablet {
+            line-height: 145%;
+            letter-spacing: 0;
+        }
+
+        @include for-laptop {
+            font-size: 24px;
+            line-height: 120%;
+            letter-spacing: -0.01em;
+        }
+
+        @include for-desktop-lg {
+            font-size: 26px;
+            line-height: 145%;
+        }
+
+        @include for-desktop-xl {
+            font-size: 32px;
+        }
+    }
+}
+
+.text-sm {
+    font-family: UniversalSans-500, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+
+    @include for-tablet {
+        line-height: 130%;
+    }
+
+    @include for-laptop {
+        font-size: 20px;
+        letter-spacing: 0;
+    }
+
+    @include for-desktop-xl {
+        font-size: 28px;
+    }
+
+    &.text-bold {
+        font-family: UniversalSans-740, Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 740;
+        line-height: 140%;
+        letter-spacing: -0.02em;
+
+        @include for-tablet {
+            line-height: 140%;
+            letter-spacing: 0;
+        }
+
+        @include for-laptop {
+            font-size: 20px;
+            line-height: 120%;
+            letter-spacing: -0.01em;
+        }
+
+        @include for-desktop-xl {
+            font-size: 28px;
+        }
+    }
+}
+
+.text-xs,
+small {
+    font-family: UniversalSans-500, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%;
+
+    @include for-laptop {
+        font-size: 16px;
+        line-height: 140%;
+    }
+
+    @include for-desktop-lg {
+        font-size: 18px;
+    }
+
+    @include for-desktop-xl {
+        font-size: 22px;
+    }
+}
+
+.title-xl {
+    font-family: UniversalSans-740-Headlines, Arial, sans-serif;
+    font-size: 50px;
+    font-weight: 740;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+    margin-left: -4px;
+
+    @include for-tablet {
+        font-size: 80px;
+        margin-left: -5px;
+    }
+
+    @include for-laptop {
+        font-size: 120px;
+        line-height: 100%;
+        margin-left: -10px;
+    }
+
+    @include for-desktop-lg {
+        font-size: 140px;
+    }
+}
+
+.title-h1,
+h1 {
+    font-family: UniversalSans-740-Headlines, Arial, sans-serif;
+    font-size: 40px;
+    font-weight: 740;
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    margin-left: -1px;
+
+    @include for-tablet {
+        font-size: 52px;
+        letter-spacing: -0.05em;
+        margin-left: -2px;
+    }
+
+    @include for-laptop {
+        font-size: 64px;
+        letter-spacing: -0.04em;
+        margin-left: -3px;
+    }
+
+    @include for-desktop {
+        font-size: 74px;
+    }
+
+    @include for-desktop-lg {
+        font-size: 86px;
+        margin-left: -4px;
+    }
+
+    @include for-desktop-xl {
+        font-size: 92px;
+    }
+
+    @include for-tv {
+        font-size: 122px;
+    }
+}
+
+.title-h2,
+h2 {
+    font-family: UniversalSans-740-Headlines, Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 740;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    margin-left: -1px;
+
+    @include for-tablet {
+        font-size: 40px;
+        line-height: 110%;
+    }
+
+    @include for-laptop {
+        font-size: 52px;
+        margin-left: -3px;
+    }
+
+    @include for-desktop-lg {
+        font-size: 64px;
+    }
+
+    @include for-desktop-xl {
+        font-size: 72px;
+    }
+
+    @include for-tv {
+        font-size: 122px;
+    }
+}
+
+.title-h3,
+h3 {
+    font-family: UniversalSans-740-Headlines, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 740;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+
+    @include for-tablet {
+        letter-spacing: -0.02em;
+    }
+
+    @include for-laptop {
+        font-size: 30px;
+        line-height: 120%;
+    }
+
+    @include for-desktop-lg {
+        font-size: 36px;
+    }
+
+    @include for-desktop-xl {
+        font-size: 44px;
+    }
+}
+
+.title-h4,
+h4 {
+    font-family: UniversalSans-740-Headlines, Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 740;
+    line-height: 135%;
+    letter-spacing: -0.03em;
+
+    @include for-tablet {
+        letter-spacing: -0.02em;
+    }
+
+    @include for-laptop {
+        font-size: 24px;
+        line-height: 140%;
+    }
+
+    @include for-desktop-lg {
+        font-size: 28px;
+    }
+
+    @include for-desktop-xl {
+        font-size: 36px;
+    }
+}
+
+.title-h5,
+h5 {
+    font-family: UniversalSans-740-Headlines, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 740;
+    line-height: 140%;
+    letter-spacing: -0.03em;
+
+    @include for-tablet {
+        letter-spacing: -0.02em;
+    }
+
+    @include for-desktop-lg {
+        font-size: 26px;
+        line-height: 125%;
+    }
+
+    @include for-desktop-xl {
+        font-size: 32px;
+    }
+}
+
+.title-h6,
+h6 {
+    font-family: UniversalSans-740-Headlines, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 740;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+
+    @include for-laptop {
+        letter-spacing: -0.02em;
+    }
+
+    @include for-desktop-lg {
+        font-size: 24px;
+    }
+
+    @include for-desktop-xl {
+        font-size: 28px;
+    }
+}
