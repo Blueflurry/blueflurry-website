@@ -1,6 +1,6 @@
 @font-face {
     font-family: UniversalSans-500;
-    src: url(/assets/fonts/UniversalSans-500.woff) format("woff");
+    src: url(/fonts/UniversalSans-500.woff) format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: UniversalSans-500-Headlines;
-    src: url(/assets/fonts/UniversalSans-500-Headlines.woff) format("woff");
+    src: url(/fonts/UniversalSans-500-Headlines.woff) format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: UniversalSans-740;
-    src: url(/assets/fonts/UniversalSans-740.woff) format("woff");
+    src: url(/fonts/UniversalSans-740.woff) format("woff");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: UniversalSans-740-Headlines;
-    src: url(/assets/fonts/UniversalSans-740-Headlines.woff) format("woff");
+    src: url(/fonts/UniversalSans-740-Headlines.woff) format("woff");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -307,7 +307,7 @@ h2 {
 
     @include for-tablet {
         font-size: 40px;
-        line-height: 110%;
+        line-height: 115%;
     }
 
     @include for-laptop {

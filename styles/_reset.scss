@@ -21,22 +21,6 @@ body {
     text-rendering: optimizeSpeed;
 }
 
-button {
-    display: inline-block;
-    background: none;
-    list-style: none outside none;
-    margin: 0;
-    padding: 0;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    text-align: left;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    cursor: pointer;
-}
-
-button,
 input,
 optgroup,
 select,
@@ -46,14 +30,7 @@ textarea {
 
 a {
     text-decoration: none;
-}
-
-button {
-    border: none;
-}
-
-button::-moz-focus-inner {
-    border: 0;
+    color: inherit;
 }
 
 input:-webkit-autofill,
@@ -82,7 +59,7 @@ li {
 }
 
 main {
-    opacity: 0;
+    // opacity: 0;
 }
 
 img {

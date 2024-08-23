@@ -1,0 +1,98 @@
+header {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: $height-header;
+    }
+
+    .logo-container {
+        position: relative;
+        height: 32px;
+        top: 2px;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        nav {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: $height-nav-gap;
+        }
+
+        button.cta {
+            margin-left: $height-nav-gap;
+        }
+
+        &-link:not(.dropdown) {
+            color: $color-darkGrey;
+
+            &:focus,
+            &:hover,
+            &:active,
+            &.active {
+                color: $color-black;
+            }
+        }
+
+        &-toggle {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: $height-header;
+
+            .line {
+                display: inline-block;
+                width: 24px;
+                height: 2px;
+                border-radius: 4px;
+                background-color: $color-darkMidnight;
+                position: absolute;
+                top: calc(($height-header / 2) - 5px);
+                right: 0;
+                transition: $transition-quick;
+
+                &:last-child {
+                    top: calc(($height-header / 2) + 5px);
+                }
+            }
+
+            &.active {
+                .line {
+                    transform-origin: center;
+                    transform: rotate(45deg);
+                    background-color: $color-white;
+                    top: calc(($height-header / 2));
+
+                    &:last-child {
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    @include for-tablet {
+        .menu {
+            .logo-container,
+            &-toggle {
+                display: none;
+            }
+        }
+    }
+}

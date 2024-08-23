@@ -1,3 +1,5 @@
+// Media Query Mixins
+
 @mixin for-tablet {
     @media (min-width: 768px) {
         @content;
@@ -31,5 +33,37 @@
 @mixin for-tv {
     @media (min-width: 2560px) {
         @content;
+    }
+}
+
+// Underline Mixin
+
+@mixin underline {
+    transition: $transition-quick;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        background-color: $color-silver;
+        width: 100%;
+        height: 1px;
+        border-radius: 4px;
+        transform-origin: left;
+        opacity: 0;
+        transform: scaleX(0);
+        transition: $transition-slow;
+    }
+
+    &:focus,
+    &:hover,
+    &:active,
+    &.active {
+        &::after {
+            opacity: 1;
+            transform: scaleX(1);
+        }
     }
 }
