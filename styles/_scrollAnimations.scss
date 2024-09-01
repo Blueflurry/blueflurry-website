@@ -1,0 +1,41 @@
+[data-aos="blueflurry"] {
+    opacity: 0;
+    transform: translateY(12%);
+    transition-property: transform, opacity;
+    transition-duration: 600ms;
+
+    &.aos-animate {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+[data-aos="blueflurry-small"] {
+    opacity: 0;
+    transform: translateY(4%);
+    transition-property: transform, opacity;
+    transition-duration: 600ms;
+
+    &.aos-animate {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+[data-aos="clientLogo"] {
+    opacity: 0;
+    filter: invert(1) grayscale(1) brightness(0.3) hue-rotate(10deg) blur(3px);
+    transition-property: filter, opacity;
+
+    &.aos-animate {
+        opacity: 0.35;
+        filter: invert(1) grayscale(1) brightness(0.3) hue-rotate(10deg) blur(0);
+    }
+}
+
+[data-aos] {
+    body[data-aos-easing="blueflurry"] &,
+    &[data-aos][data-aos-easing="blueflurry"] {
+        transition-timing-function: $easeOutExpo;
+    }
+}

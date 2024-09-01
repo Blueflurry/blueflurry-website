@@ -1,24 +1,53 @@
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 100;
     width: 100%;
+    height: $height-header;
+    transform-origin: top;
+    opacity: 0; // made 1 with javascript to give loading effect without changing other settings
+    transition: $transition-slow;
+
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     background: $color-headerWhite;
+    //     backdrop-filter: blur(12px); /* Adjust the blur intensity */
+    //     z-index: -1; /* Ensure the blur is behind the content */
+    // }
+
+    &.scrollDown {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+
+    &.scrollUp {
+        opacity: 1;
+        transform: scaleY(1);
+        background: $color-headerWhite;
+        height: $height-header - 20px;
+        backdrop-filter: blur(12px);
+    }
 
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: $height-header;
+        height: 100%;
     }
 
     .logo-container {
         position: relative;
-        height: 32px;
+        height: 24px;
         top: 2px;
     }
 
     .menu {
-        display: flex;
+        display: none;
         justify-content: flex-start;
         align-items: center;
 
@@ -72,7 +101,7 @@ header {
                 .line {
                     transform-origin: center;
                     transform: rotate(45deg);
-                    background-color: $color-white;
+                    background-color: $color-black;
                     top: calc(($height-header / 2));
 
                     &:last-child {
@@ -87,8 +116,51 @@ header {
         }
     }
 
+    &.dark {
+        .menu {
+            &-toggle {
+                .line {
+                    background-color: $color-grey;
+                }
+
+                &.active {
+                    .line {
+                        background-color: $color-white;
+                    }
+                }
+            }
+
+            &-link:not(.dropdown) {
+                color: $color-grey;
+
+                &::after {
+                    background-color: $color-midnight;
+                }
+
+                &:focus,
+                &:hover,
+                &:active,
+                &.active {
+                    color: $color-white;
+
+                    &::after {
+                        background-color: $color-darkGrey;
+                    }
+                }
+            }
+        }
+    }
+
+    @include for-largePhone {
+        .logo-container {
+            height: 28px;
+        }
+    }
+
     @include for-tablet {
         .menu {
+            display: flex;
+
             .logo-container,
             &-toggle {
                 display: none;

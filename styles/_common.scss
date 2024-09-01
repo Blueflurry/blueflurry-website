@@ -15,6 +15,45 @@
     }
 }
 
+.text-white {
+    color: $color-white;
+}
+
+.text-silver {
+    color: $color-silver;
+}
+
+.text-grey {
+    color: $color-grey;
+}
+
+.text-darkGrey {
+    color: $color-darkGrey;
+}
+
+.mt {
+    &-1 {
+        display: block;
+        margin-top: calc(4px * 1);
+    }
+    &-2 {
+        display: block;
+        margin-top: calc(4px * 2);
+    }
+    &-3 {
+        display: block;
+        margin-top: calc(4px * 3);
+    }
+    &-4 {
+        display: block;
+        margin-top: calc(4px * 4);
+    }
+    &-5 {
+        display: block;
+        margin-top: calc(4px * 5);
+    }
+}
+
 .dropdown {
     color: $color-darkGrey;
     transition: $transition-quick;

@@ -114,4 +114,23 @@ button,
             }
         }
     }
+
+    &.dark {
+        color: $color-white;
+
+        &::after {
+            background-color: $color-white !important;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            background-color: $color-darkGrey;
+            width: 100%;
+            height: 1px;
+            border-radius: 4px;
+        }
+    }
 }

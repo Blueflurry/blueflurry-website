@@ -1,0 +1,31 @@
+/* Marquee styles */
+.marquee {
+    user-select: none;
+    pointer-events: none;
+    opacity: 0;
+    gap: $marquee-gap;
+    transition: all 2000ms $easeOutExpo;
+
+    &__content {
+        flex-shrink: 0;
+        display: flex;
+        justify-content: flex-start;
+        gap: $marquee-gap;
+        min-width: 100%;
+        animation: scroll 18s linear infinite;
+    }
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc((-100% - $marquee-gap + 26px)));
+    }
+}
+
+/* Pause on hover */
+.marquee--hover-pause:hover .marquee__content {
+    animation-play-state: paused;
+}

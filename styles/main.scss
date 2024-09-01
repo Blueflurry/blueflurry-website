@@ -3,14 +3,19 @@
 
 @import "./reset";
 @import "./typography";
+@import "./scrollAnimations";
 @import "./container";
 @import "./sections";
 @import "./links-and-button";
+@import "./marquee";
 
 @import "./common";
 @import "./header";
+@import "./accordian";
 
-@import "./hero";
+// @import "./hero";
+
+@import "./pages/home";
 
 // The structuring is like this:
 //

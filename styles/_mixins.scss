@@ -1,5 +1,11 @@
 // Media Query Mixins
 
+@mixin for-largePhone {
+    @media (min-width: 400px) {
+        @content;
+    }
+}
+
 @mixin for-tablet {
     @media (min-width: 768px) {
         @content;

@@ -5,43 +5,276 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="./images/favicon.png" type="image/png" />
         <title>Blue Flurry | High quality software development at affordable rates, delivered on time</title>
+        <!-- 3rd party CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <!-- Custom CSS -->
         <link rel="stylesheet" href="./styles/main.min.css" />
     </head>
 
     <body>
+        <!-- <header>
+            <div class="container">
+                <div class="logo-container" data-aos="blueflurry">
+                    <img src="./images/logo-left.svg" alt="Blue Flurry Logo" class="logo logo-left" />
+                    <img src="./images/logo-white-right.svg" alt="Blue Flurry Logo" class="logo logo-right" />
+                </div>
+            </div>
+        </header> -->
+
         <header>
             <div class="container">
                 <div class="logo-container">
                     <img src="./images/logo-left.svg" alt="Blue Flurry Logo" class="logo logo-left" />
-                    <img src="./images/logo-white-right.svg" alt="Blue Flurry Logo" class="logo logo-right" />
+                    <img src="./images/logo-black-right.svg" alt="Blue Flurry Logo" class="logo logo-right" />
+                </div>
+                <div class="menu-toggle">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+                <div class="menu">
+                    <div class="logo-container">
+                        <img src="./images/logo-left.svg" alt="Blue Flurry Logo" class="logo logo-left" />
+                    </div>
+                    <nav>
+                        <a class="menu-link text-sm active" href="/">Home</a>
+                        <a class="menu-link text-sm" href="/work">Work</a>
+                        <a class="menu-link text-sm" href="/clients">Clients</a>
+                        <a class="menu-link text-sm" href="/services">Services</a>
+                        <a class="menu-link text-sm" href="/about">About</a>
+                        <a class="menu-link text-sm" href="/blog">Blog</a>
+                        <a class="menu-link text-sm" href="/contact">Contact</a>
+                    </nav>
                 </div>
             </div>
         </header>
 
         <main>
-            <section class="section section-indent" id="hero">
+            <!-- HERO SECTION -->
+            <section class="section" id="hero">
                 <div class="container">
                     <div class="content">
-                        <p class="text-md attention">Trusted By 1,290+ Business Owners & Entrepreneurs</p>
-                        <h1 class="title-h2">We will build you a cutting-edge ecommerce that turns strangers into customers on autopilot</h1>
-                        <!-- <h1 class="title-h2">
-                            We will build you a cutting-edge ecommerce store that dominates your market and skyrockets your sales
-                        </h1> -->
-                        <span class="buttons">
+                        <h1 class="word-break-animate" data-aos="blueflurry" data-aos-delay="200">
+                            Blueflurry is a global tech and innovative design agency
+                        </h1>
+                        <p class="lead lead-short" data-aos="blueflurry" data-aos-delay="250">
+                            Award-winning team with 7+ years of building scalable, successful apps.
+                        </p>
+                        <div data-aos="blueflurry" data-aos-delay="300">
                             <a class="button cta text-md" href="/contact">Schedule Meeting</a>
-                            <a class="button text-md" href="/contact">How it Works</a>
-                        </span>
+                        </div>
                     </div>
                 </div>
-                <div id="hero-img" class="landing-hero">
-                    <img src="/images/hero-3.jpg" alt="Hero Image" />
+                <div id="hero-bg-element">
+                    <img src="./images/shape-white-2.webp" />
                 </div>
             </section>
+
+            <section id="reel">
+                <video src="./images/hero-video.mp4" autoplay muted loop></video>
+            </section>
+
+            <!-- SERVICES SECTION -->
+            <section class="section section-indent" id="services">
+                <div class="container">
+                    <p class="text-lg" data-aos="blueflurry">
+                        We build transformative digital experiences for the world's leading brands by blending AI, design, and technology.
+                    </p>
+                    <div class="accordian">
+                        <div class="accordian__item" data-aos="blueflurry">
+                            <h3 class="accordian__item__title">
+                                Branding
+                                <i data-feather="chevron-down" class="icon"></i>
+                            </h3>
+                            <div class="accordian__item__content text-md">
+                                <div>
+                                    <p>
+                                        A brand is more than just a logo and color palette. We'll craft a distinct visual and verbal identity, create
+                                        necessary assets, and establish clear brand guidelines to maintain consistency across all touchpoints.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordian__item" data-aos="blueflurry" data-aos-delay="50">
+                            <h3 class="accordian__item__title">
+                                Websites
+                                <i data-feather="chevron-down" class="icon"></i>
+                            </h3>
+                            <div class="accordian__item__content text-md">
+                                <div>
+                                    <p>
+                                        A modern brand is defined by its digital presence, starting with the website. We focus on creating websites
+                                        that effectively convey the brand's identity and perspective for an enhanced user experience.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordian__item" data-aos="blueflurry" data-aos-delay="100">
+                            <h3 class="accordian__item__title">
+                                Development
+                                <i data-feather="chevron-down" class="icon"></i>
+                            </h3>
+                            <div class="accordian__item__content text-md">
+                                <div>
+                                    <p>
+                                        Our web and mobile app developers are committed to achieving visual and performance excellence. From the
+                                        backend to the frontend, we prioritize delivering a seamless and enjoyable user experience on all devices.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordian__item" data-aos="blueflurry" data-aos-delay="150">
+                            <h3 class="accordian__item__title">
+                                Artificial Intelligence
+                                <i data-feather="chevron-down" class="icon"></i>
+                            </h3>
+                            <div class="accordian__item__content text-md">
+                                <div>
+                                    <p>
+                                        Blueflurry strategically integrates AI, optimizing processes, and elevating digital products. We're at the
+                                        forefront of innovating AI-driven UX, pioneering novel interaction models to set new standards in interface
+                                        design.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section" id="clients">
+                <div class="container">
+                    <div class="clients__logos">
+                        <img src="./images/brands/1.png" data-aos="clientLogo" style="transition-delay: 25ms; transition-duration: 1500ms" />
+                        <img src="./images/brands/2.png" data-aos="clientLogo" style="transition-delay: 50ms; transition-duration: 1500ms" />
+                        <img src="./images/brands/3.png" data-aos="clientLogo" style="transition-delay: 75ms; transition-duration: 1500ms" />
+                        <img src="./images/brands/4.png" data-aos="clientLogo" style="transition-delay: 100ms; transition-duration: 1500ms" />
+                        <img src="./images/brands/5.png" data-aos="clientLogo" style="transition-delay: 125ms; transition-duration: 1500ms" />
+                        <img src="./images/brands/6.png" data-aos="clientLogo" style="transition-delay: 150ms; transition-duration: 1500ms" />
+                        <img src="./images/brands/7.png" data-aos="clientLogo" style="transition-delay: 175ms; transition-duration: 1500ms" />
+                        <img src="./images/brands/8.png" data-aos="clientLogo" style="transition-delay: 200ms; transition-duration: 1500ms" />
+                        <img src="./images/brands/9.png" data-aos="clientLogo" style="transition-delay: 225ms; transition-duration: 1500ms" />
+                    </div>
+                    <a class="button icon-right" href="/clients" data-aos="blueflurry">
+                        View all clients
+                        <i data-feather="arrow-right" class="icon"></i>
+                    </a>
+                </div>
+            </section>
+            <section class="section section-indent--small" id="works">
+                <a href="/work/project1">
+                    <div class="work" data-aos="blueflurry-small">
+                        <video src="./images/hero-video.mp4" autoplay loop muted></video>
+                        <div class="content">
+                            <h3>Project</h3>
+                            <p class="text-sm">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum aspernatur autem eius officia harum saepe, laudantium
+                                porro eum. Ducimus, laboriosam?
+                            </p>
+                            <span class="tags text-sm">Website &bull; App &bull; UX Design</span>
+                            <a class="button icon-right text-sm" href="/work/project1">
+                                View case study
+                                <i data-feather="arrow-right" class="icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </a>
+                <a href="/work/project1">
+                    <div class="work" data-aos="blueflurry-small">
+                        <video src="./images/hero-video.mp4" autoplay loop muted></video>
+                        <div class="content">
+                            <h3>Project</h3>
+                            <p class="text-sm">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum aspernatur autem eius officia harum saepe, laudantium
+                                porro eum. Ducimus, laboriosam?
+                            </p>
+                            <span class="tags text-sm">Website &bull; App &bull; UX Design</span>
+                            <a class="button icon-right text-sm" href="/work/project1">
+                                View case study
+                                <i data-feather="arrow-right" class="icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </a>
+                <a href="/work/project1">
+                    <div class="work" data-aos="blueflurry-small">
+                        <video src="./images/hero-video.mp4" autoplay loop muted></video>
+                        <div class="content">
+                            <h3>Project</h3>
+                            <p class="text-sm">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum aspernatur autem eius officia harum saepe, laudantium
+                                porro eum. Ducimus, laboriosam?
+                            </p>
+                            <span class="tags text-sm">Website &bull; App &bull; UX Design</span>
+                            <a class="button icon-right text-sm" href="/work/project1">
+                                View case study
+                                <i data-feather="arrow-right" class="icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </a>
+                <a href="/work/project1">
+                    <div class="work" data-aos="blueflurry-small">
+                        <video src="./images/hero-video.mp4" autoplay loop muted></video>
+                        <div class="content">
+                            <h3>Project</h3>
+                            <p class="text-sm">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum aspernatur autem eius officia harum saepe, laudantium
+                                porro eum. Ducimus, laboriosam?
+                            </p>
+                            <span class="tags text-sm">Website &bull; App &bull; UX Design</span>
+                            <a class="button icon-right text-sm" href="/work/project1">
+                                View case study
+                                <i data-feather="arrow-right" class="icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </a>
+                <a href="/work/project1">
+                    <div class="work" data-aos="blueflurry-small">
+                        <video src="./images/hero-video.mp4" autoplay loop muted></video>
+                        <div class="content">
+                            <h3>Project</h3>
+                            <p class="text-sm">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum aspernatur autem eius officia harum saepe, laudantium
+                                porro eum. Ducimus, laboriosam?
+                            </p>
+                            <span class="tags text-sm">Website &bull; App &bull; UX Design</span>
+                            <a class="button icon-right text-sm" href="/work/project1">
+                                View case study
+                                <i data-feather="arrow-right" class="icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </a>
+                <a href="/work/project1">
+                    <div class="work" data-aos="blueflurry-small">
+                        <video src="./images/hero-video.mp4" autoplay loop muted></video>
+                        <div class="content">
+                            <h3>Project</h3>
+                            <p class="text-sm">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum aspernatur autem eius officia harum saepe, laudantium
+                                porro eum. Ducimus, laboriosam?
+                            </p>
+                            <span class="tags text-sm">Website &bull; App &bull; UX Design</span>
+                            <a class="button icon-right text-sm" href="/work/project1">
+                                View case study
+                                <i data-feather="arrow-right" class="icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="button icon-right" href="/works" data-aos="blueflurry">
+                    Explore all Works
+                    <i data-feather="arrow-right" class="icon"></i>
+                </a>
+            </section>
+            <section class="section section-indent--small"></section>
         </main>
 
         <!-- Scripts -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-        <script src="./scripts/main.js"></script>
+        <script src="/scripts/main.js"></script>
+        <script src="/scripts/scroll.js"></script>
     </body>
 </html>
