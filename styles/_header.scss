@@ -22,12 +22,12 @@ header {
 
     &.scrollDown {
         opacity: 0;
-        transform: scaleY(0);
+        transform: translateY(-100%);
     }
 
     &.scrollUp {
         opacity: 1;
-        transform: scaleY(1);
+        transform: translateY(0);
         background: $color-headerWhite;
         height: $height-header - 20px;
         backdrop-filter: blur(12px);

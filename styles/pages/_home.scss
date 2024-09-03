@@ -9,8 +9,8 @@
         align-items: center;
         gap: 60px;
         // height: 80vh;
-        padding-top: 160px;
-        padding-bottom: 220px;
+        padding-top: 240px;
+        padding-bottom: 110px;
         position: relative;
         overflow: hidden;
         text-align: center;
@@ -69,10 +69,10 @@
     &-bg {
         &-element {
             position: absolute;
-            width: 300px;
+            width: 260px;
             height: auto;
-            top: 350px;
-            left: 150px;
+            top: -70px;
+            left: 170px;
             opacity: 0;
             transform: scale(0.96);
             transition: all 2500ms $easeOutExpo;
@@ -291,7 +291,7 @@
             .tags {
                 display: block;
                 color: $color-shadow;
-                margin-bottom: 16px;
+                margin-bottom: 24px;
             }
         }
     }

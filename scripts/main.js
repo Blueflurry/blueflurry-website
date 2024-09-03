@@ -46,11 +46,15 @@ function setupAnimations() {
     }, 1000);
 
     // Setup animations
+
+    var viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+
     AOS.init({
         duration: 900,
         easing: "blueflurry",
         once: true,
         delay: 50,
+        offset: viewportWidth < 410 ? 60 : 120,
     });
 }
 
@@ -108,10 +112,39 @@ function setupAccordians() {
     });
 }
 
-setupAnimations();
+function openPreloader() {
+    var body = document.body;
+    body.style.overflow = "hidden";
+}
+
+function closePreloader() {
+    var body = document.body;
+    var preloader = document.querySelector("#preloader");
+
+    body.style.overflow = "auto";
+    preloader.classList.add("hide");
+
+    setTimeout(function () {
+        preloader.style.display = "none";
+    }, 400);
+}
+
+function setupPage() {
+    var heroVideo = document.querySelector("#reel video");
+    heroVideo.addEventListener("loadeddata", function () {
+        setTimeout(function () {
+            closePreloader();
+            setupAnimations();
+            setupAccordians();
+        }, 400);
+    });
+}
+
 // showHeroBg();
 // setupMarquee();
-setupAccordians();
+
+openPreloader();
+setupPage();
 
 // Setup feather icons
 feather.replace();
